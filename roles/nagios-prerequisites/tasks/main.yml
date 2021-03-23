@@ -1,0 +1,9 @@
+- name: Install Prerequisites
+  yum:
+    name:
+    - epel-release
+    - vim
+    - wget
+    - git
+    - unzip
+    - curl

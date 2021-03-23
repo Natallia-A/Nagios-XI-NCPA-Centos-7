@@ -1,0 +1,20 @@
+- hosts: all
+  tasks:
+  - name: install Prerequisites
+    import_role:
+      name: nagios-prerequisites
+
+- hosts: nagios
+  tasks:
+  - name: Install Nagios XI
+    import_role:
+      name: nagios-installation
+
+- hosts: ncpa-agent
+  tasks:
+  - name:  Install NCPA for Nagios
+    import_role:
+      name: nagios-ncpa
+
+
+
